@@ -12,32 +12,32 @@
         <div class="nav-bar-top">
             <header>JS object basics</header>
             <ul>
-                <a href="#introduction" class="nav-link"><li>Introduction</li></a>
-                <a href="#what_you_should_already_know" class="nav-link"><li>What you should already know</li></a>
-                <a href="#object_basics" class="nav-link"><li>Object basics</li></a>
-                <a href="#dot_notation" class="nav-link"><li>Dot notation</li></a>
-                <a href="#objects_as_object_properties" class="nav-link"><li>Objects as object properties</li></a>
-                <a href="#bracket_notation" class="nav-link"><li>Bracket notation</li></a>
-                <a href="#setting_object_members" class="nav-link"><li>Setting object members</li></a>
-                <a href="#what_is_this?" class="nav-link"><li>What is "this"?</li></a>
-                <a href="#introducing_constructors" class="nav-link"><li>Introducing constructors</li></a>
-                <a href="#you've_been_using_objects_all_along" class="nav-link"><li>You've been using objects all along</li></a>
-                <a href="#summary" class="nav-link"><li>Summary</li></a>
-                <a href="#reference" class="nav-link"><li>Reference</li></a>
+                <a href="#Introduction" class="nav-link"><li>Introduction</li></a>
+                <a href="#What_you_should_already_know" class="nav-link"><li>What you should already know</li></a>
+                <a href="#Object_basics" class="nav-link"><li>Object basics</li></a>
+                <a href="#Dot_notation" class="nav-link"><li>Dot notation</li></a>
+                <a href="#Objects_as_object_properties" class="nav-link"><li>Objects as object properties</li></a>
+                <a href="#Bracket_notation" class="nav-link"><li>Bracket notation</li></a>
+                <a href="#Setting_object_members" class="nav-link"><li>Setting object members</li></a>
+                <a href="#What_is_this?" class="nav-link"><li>What is "this"?</li></a>
+                <a href="#Introducing_constructors" class="nav-link"><li>Introducing constructors</li></a>
+                <a href="#You've_been_using_objects_all_along" class="nav-link"><li>You've been using objects all along</li></a>
+                <a href="#Summary" class="nav-link"><li>Summary</li></a>
+                <a href="#Reference" class="nav-link"><li>Reference</li></a>
             </ul>
         </div>
         <div id="signature"><a href="https://github.com/wesgunning/"><i class="fa fa-github"></i></a>Created by Wes G.</div>
     </nav>
     <main id="main-doc">
-        <section class="main-section" id="introduction">
+        <section class="main-section" id="Introduction">
             <header>Introduction</header>
             <p>In this article, we'll look at fundamental JavaScript object syntax, and revisit some JavaScript features that we've already seen earlier in the course, reiterating the fact that many of the features you've already dealt with are objects.</p>
         </section>
-        <section class="main-section" id="what_you_should_already_know">
+        <section class="main-section" id="What_you_should_already_know">
             <header>What you should already know</header>
             <p>This article assumes you already possess basic computer literacy, a basic understanding of HTML and CSS, and familiarity with JavaScript basics.</p>
         </section>
-        <section class="main-section" id="object_basics">
+        <section class="main-section" id="Object_basics">
             <header>Object basics</header>
             <p>An object is a collection of related data and/or functionality. These usually consist of several variables and functions (which are called properties and methods when they are inside objects). Let's work through an example to understand what they look like.</p>
             <p>To begin with, make a local copy of our <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics#:~:text=copy%20of%20our-,oojs.html,-file.%20This%20contains">oojs.html</a> file. This contains very little — a <code class="tag">script</code> element for us to write our source code into. We'll use this as a basis for exploring basic object syntax. While working with this example you should have your developer tools JavaScript console open and ready to type in some commands.</p>
@@ -97,7 +97,7 @@ person.introduceSelf();
             <p>An object like this is referred to as an object literal — we've literally written out the object contents as we've come to create it. This is different compared to objects instantiated from classes, which we'll look at later on.</p>
             <p>It is very common to create an object using an object literal when you want to transfer a series of structured, related data items in some manner, for example sending a request to the server to be put into a database. Sending a single object is much more efficient than sending several items individually, and it is easier to work with than an array, when you want to identify individual items by name.</p>
         </section>
-        <section class="main-section" id="dot_notation">
+        <section class="main-section" id="Dot_notation">
             <header>Dot notation</header>
             <p>Above, you accessed the object's properties and methods using dot notation. The object name (person) acts as the namespace — it must be entered first to access anything inside the object. Next you write a dot, then the item you want to access — this can be the name of a simple property, an item of an array property, or a call to one of the object's methods, for example:</p>
             <p class="code">
@@ -105,7 +105,7 @@ person.introduceSelf();
 person.bio();</code></pre>
             </p>
         </section>
-        <section class="main-section" id="objects_as_object_properties">
+        <section class="main-section" id="Objects_as_object_properties">
             <header>Objects as object properties</header>
             <p>An object property can itself be an object. For example, try changing the name member from</p>
             <p class="code">
@@ -139,7 +139,7 @@ name.last;</code></pre>
             </p>
             <p>Otherwise, your methods will no longer work.</p>
         </section>
-        <section class="main-section" id="bracket_notation">
+        <section class="main-section" id="Bracket_notation">
             <header>Bracket notation</header>
             <p>Bracket notation provides an alternative way to access object properties. Instead of using dot notation like this:</p>
             <p class="code">
@@ -170,7 +170,7 @@ logProperty("age");
 // 32</code></pre>
             </p>
         </section>
-        <section class="main-section" id="setting_object_members">
+        <section class="main-section" id="Setting_object_members">
             <header>Setting object members</header>
             <p>So far we've only looked at retrieving (or getting) object members — you can also set (update) the value of object members by declaring the member you want to set (using dot or bracket notation), like this:</p>
             <p class="code">
@@ -220,7 +220,7 @@ person[myDataName] = myDataValue;</code></pre>
             </p>
             <p>Adding a property to an object using the method above isn't possible with dot notation, which can only accept a literal member name, not a variable value pointing to a name.</p>
         </section>
-        <section class="main-section" id="what_is_this?">
+        <section class="main-section" id="What_is_this?">
             <header>What is "this"?</header>
             <p>You may have noticed something slightly strange in our methods. Look at this one for example:</p>
             <p class="code">
@@ -248,7 +248,7 @@ const person2 = {
             </p>
             <p>In this case, person1.introduceSelf() outputs "Hi! I'm Chris."; person2.introduceSelf() on the other hand outputs "Hi! I'm Deepti.", even though the method's code is exactly the same in each case. This isn't hugely useful when you are writing out object literals by hand, but it will be essential when we start using constructors to create more than one object from a single object definition, and that's the subject of the next section.</p>
         </section>
-        <section class="main-section" id="introducing_constructors">
+        <section class="main-section" id="Introducing_constructors">
             <header>Introducing constructors</header>
             <p>Using object literals is fine when you only need to create one object, but if you have to create more than one, as in the previous section, they're seriously inadequate. We have to write out the same code for every object we create, and if we want to change some properties of the object - like adding a height property - then we have to remember to update every object.</p>
             <p>We would like a way to define the "shape" of an object — the set of methods and the properties it can have — and then create as many objects as we like, just updating the values for the properties that are different.</p>
@@ -309,7 +309,7 @@ frankie.introduceSelf();
 // "Hi! I'm Frankie."</code></pre>
             </p>
         </section>
-        <section class="main-section" id="you've_been_using_objects_all_along">
+        <section class="main-section" id="You've_been_using_objects_all_along">
             <header>You've been using objects all along</header>
             <p>As you've been going through these examples, you have probably been thinking that the dot notation you've been using is very familiar. That's because you've been using it throughout the course! Every time we've been working through an example that uses a built-in browser API or JavaScript object, we've been using objects, because such features are built using exactly the same kind of object structures that we've been looking at here, albeit more complex ones than in our own basic custom examples.</p>
             <p>So when you used string methods like:</p>
@@ -329,11 +329,11 @@ const myVideo = document.querySelector("video");</code></pre>
                 <pre><code>const myNotification = new Notification("Hello!");</code></pre>
             </p>
         </section>
-        <section class="main-section" id="summary">
+        <section class="main-section" id="Summary">
             <header>Summary</header>
             <p>Congratulations, you've reached the end of our first JS objects article — you should now have a good idea of how to work with objects in JavaScript — including creating your own simple objects. You should also appreciate that objects are very useful as structures for storing related data and functionality — if you tried to keep track of all the properties and methods in our person object as separate variables and functions, it would be inefficient and frustrating, and we'd run the risk of clashing with other variables and functions that have the same names. Objects let us keep the information safely locked away in their own package, out of harm's way.</p>
         </section>
-        <section class="main-section" id="reference">
+        <section class="main-section" id="Reference">
             <header>Reference</header>
             <ul>
                 <li>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics">MDN</a></li>
