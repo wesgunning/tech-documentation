@@ -1,3 +1,7 @@
+:root {
+    --code-bg-color: lightgrey;
+    --code-bg-radius: 2px;
+}
 * {
     margin: 0;
     padding: 0;
@@ -6,22 +10,26 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    margin-left: 200px;
+    margin-left: 270px;
     padding: 20px;
 }
 nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px;
+    width: 260px;
     height: 100%;
     border-right: 1px solid black;
+}
+nav header {
+    padding: 10px 30px;
 }
 nav ul {
     list-style-type: none;
 }
 #navbar ul li {
     border-top: 1px solid black;
+    padding: 10px 30px;
 }
 #navbar a {
     text-decoration: none;
@@ -32,4 +40,21 @@ header {
 }
 header, p, ul {
     font-family: Arial, Helvetica, sans-serif;
+}
+section {
+    padding: 10px 0;
+}
+.tag {
+    background-color: var(--code-bg-color);
+    border-radius: var(--code-bg-radius);
+}
+.tag::before {
+    content: '<';
+}
+.tag::after {
+    content: '>';
+}
+.code, pre {
+    background-color: var(--code-bg-color);
+    border-radius: var(--code-bg-radius);
 }
