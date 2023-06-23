@@ -4,25 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/f7e6ad2e98.js" crossorigin="anonymous"></script>
     <title>Technical Documentation</title>
 </head>
 <body>
     <nav id="navbar">
-        <header>JS object&nbsp;basics</header>
-        <ul>
-            <a href="#introduction" class="nav-link"><li>Introduction</li></a>
-            <a href="#what_you_should_already_know" class="nav-link"><li>What you should already know</li></a>
-            <a href="#object_basics" class="nav-link"><li>Object basics</li></a>
-            <a href="#dot_notation" class="nav-link"><li>Dot notation</li></a>
-            <a href="#objects_as_object_properties" class="nav-link"><li>Objects as object properties</li></a>
-            <a href="#bracket_notation" class="nav-link"><li>Bracket notation</li></a>
-            <a href="#setting_object_members" class="nav-link"><li>Setting object members</li></a>
-            <a href="#what_is_this?" class="nav-link"><li>What is "this"?</li></a>
-            <a href="#introducing_constructors" class="nav-link"><li>Introducing constructors</li></a>
-            <a href="#you've_been_using_objects_all_along" class="nav-link"><li>You've been using objects all along</li></a>
-            <a href="#summary" class="nav-link"><li>Summary</li></a>
-            <a href="#reference" class="nav-link"><li>Reference</li></a>
-        </ul>
+        <div class="nav-bar-top">
+            <header>JS object basics</header>
+            <ul>
+                <a href="#introduction" class="nav-link"><li>Introduction</li></a>
+                <a href="#what_you_should_already_know" class="nav-link"><li>What you should already know</li></a>
+                <a href="#object_basics" class="nav-link"><li>Object basics</li></a>
+                <a href="#dot_notation" class="nav-link"><li>Dot notation</li></a>
+                <a href="#objects_as_object_properties" class="nav-link"><li>Objects as object properties</li></a>
+                <a href="#bracket_notation" class="nav-link"><li>Bracket notation</li></a>
+                <a href="#setting_object_members" class="nav-link"><li>Setting object members</li></a>
+                <a href="#what_is_this?" class="nav-link"><li>What is "this"?</li></a>
+                <a href="#introducing_constructors" class="nav-link"><li>Introducing constructors</li></a>
+                <a href="#you've_been_using_objects_all_along" class="nav-link"><li>You've been using objects all along</li></a>
+                <a href="#summary" class="nav-link"><li>Summary</li></a>
+                <a href="#reference" class="nav-link"><li>Reference</li></a>
+            </ul>
+        </div>
+        <div id="signature"><a href="https://github.com/wesgunning/"><i class="fa fa-github"></i></a>Created by Wes G.</div>
     </nav>
     <main id="main-doc">
         <section class="main-section" id="introduction">
@@ -38,13 +42,11 @@
             <p>An object is a collection of related data and/or functionality. These usually consist of several variables and functions (which are called properties and methods when they are inside objects). Let's work through an example to understand what they look like.</p>
             <p>To begin with, make a local copy of our <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics#:~:text=copy%20of%20our-,oojs.html,-file.%20This%20contains">oojs.html</a> file. This contains very little — a <code class="tag">script</code> element for us to write our source code into. We'll use this as a basis for exploring basic object syntax. While working with this example you should have your developer tools JavaScript console open and ready to type in some commands.</p>
             <p>As with many things in JavaScript, creating an object often begins with defining and initializing a variable. Try entering the following line below the JavaScript code that's already in your file, then saving and refreshing:</p>
-            <p class="code"><code>const person = {};</code></p>
+            <p class="code"><pre><code>const person = {};</code></pre></p>
             <p>Now open your browser's JavaScript console, enter person into it, and press Enter/Return. You should get a result similar to one of the below lines:</p>
             <p class="code"><pre><code>[object Object]
 Object { }
-{ }
-                </code>
-            </pre></p>
+{ }</code></pre></p>
             <p>Congratulations, you've just created your first object. Job done! But this is an empty object, so we can't really do much with it. Let's update the JavaScript object in our file to look like this:</p>
             <p class="code">
                 <pre><code>const person = {
@@ -56,8 +58,7 @@ Object { }
     introduceSelf: function () {
         console.log(`Hi! I'm ${this.name[0]}.`);
     },
-};
-                </code></pre>
+};</code></pre>
             </p>
             <p>After saving and refreshing, try entering some of the following into the JavaScript console on your browser devtools:</p>
             <p class="code">
@@ -67,8 +68,7 @@ person.age;
 person.bio();
 // "Bob Smith is 32 years old."
 person.introduceSelf();
-// "Hi! I'm Bob."
-                </code></pre>
+// "Hi! I'm Bob."</code></pre>
             </p>
             <p>You have now got some data and functionality inside your object, and are now able to access them with some nice simple syntax!</p>
             <p>So what is going on here? Well, an object is made up of multiple members, each of which has a name (e.g. name and age above), and a value (e.g. ['Bob', 'Smith'] and 32). Each name/value pair must be separated by a comma, and the name and value in each case are separated by a colon. The syntax always follows this pattern:</p>
@@ -77,8 +77,7 @@ person.introduceSelf();
     member1Name: member1Value,
     member2Name: member2Value,
     member3Name: member3Value,
-};
-                </code></pre>
+};</code></pre>
             </p>
             <p>The value of an object member can be pretty much anything — in our person object we've got a number, an array, and two functions. The first two items are data items, and are referred to as the object's properties. The last two items are functions that allow the object to do something with that data, and are referred to as the object's methods.</p>
             <p>When the object's members are functions there's a simpler syntax. Instead of bio: function () we can write bio(). Like this:</p>
